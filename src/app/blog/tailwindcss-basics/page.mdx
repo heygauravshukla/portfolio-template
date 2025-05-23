@@ -1,0 +1,89 @@
+# Welcome to my MDX page!
+
+# Getting Started with Tailwind CSS
+
+Tailwind CSS is a utility-first CSS framework that lets you build modern websites without ever leaving your HTML. In this article, we'll explore the basics of Tailwind CSS and see how it can revolutionize your web development workflow.
+
+## What is Tailwind CSS?
+
+Tailwind CSS is different from traditional CSS frameworks like Bootstrap. Instead of providing pre-built components, it gives you low-level utility classes that you can combine to create any design. Think of it as a set of building blocks that you can assemble in countless ways.
+
+## Basic Examples
+
+Let's look at some common use cases:
+
+### 1. Styling Text
+
+```jsx
+<p className="text-lg font-bold text-blue-600">
+  This is a large, bold, blue text
+</p>
+```
+
+### 2. Creating a Button
+
+```jsx
+<button className="rounded-md bg-indigo-600 px-4 py-2 text-white transition-colors hover:bg-indigo-700">
+  Click me
+</button>
+```
+
+### 3. Responsive Layout
+
+```jsx
+<div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+  <div className="rounded-lg bg-gray-100 p-4">Item 1</div>
+  <div className="rounded-lg bg-gray-100 p-4">Item 2</div>
+  <div className="rounded-lg bg-gray-100 p-4">Item 3</div>
+</div>
+```
+
+## Key Concepts
+
+### Responsive Design
+
+Tailwind uses prefixes like `sm:`, `md:`, `lg:`, and `xl:` for responsive design:
+
+- `md:flex` - Apply flex at medium screens and up
+- `lg:hidden` - Hide on large screens
+
+### State Modifiers
+
+Use modifiers for different states:
+
+- `hover:` - When hovering
+- `focus:` - When element has focus
+- `active:` - When element is active
+
+### Spacing System
+
+Tailwind uses a consistent spacing scale:
+
+- `p-4` - Padding of 1rem (16px)
+- `m-2` - Margin of 0.5rem (8px)
+- `gap-6` - Gap of 1.5rem (24px)
+
+## Benefits of Using Tailwind CSS
+
+1. **Rapid Development**: Build custom designs without writing CSS
+2. **Maintainable Code**: Avoid specificity issues and CSS conflicts
+3. **Responsive by Default**: Built-in responsive design system
+4. **Dark Mode Support**: Easy dark mode implementation with `dark:` prefix
+5. **Small Production Bundle**: Only includes the utilities you use
+
+## Getting Started
+
+To start using Tailwind CSS in your project:
+
+```bash
+npm install tailwindcss
+npx tailwindcss init
+```
+
+Then configure your content paths in `tailwind.config.js` and include Tailwind in your CSS.
+
+## Conclusion
+
+Tailwind CSS might seem verbose at first, but it provides an incredibly powerful and flexible system for building modern user interfaces. As you use it more, you'll find that it speeds up your development process and helps maintain consistency across your projects.
+
+Remember: The real power of Tailwind CSS comes from combining these simple utilities to create complex, responsive designs without ever leaving your HTML.

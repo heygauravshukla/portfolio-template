@@ -1,0 +1,58 @@
+---
+title: "Tailwind CSS Animation Best Practices"
+date: "2025-05-24"
+description: "Master the art of creating smooth, performant animations using Tailwind CSS built-in utilities and custom configurations."
+image: "/images/blog/tailwindcss.webp"
+---
+
+# Tailwind CSS Animation Best Practices
+
+Learn how to create smooth, performant animations using Tailwind CSS's built-in animation utilities and custom configurations.
+
+## Built-in Animation Classes
+
+Tailwind provides several animation utilities out of the box:
+
+1. `animate-spin`
+2. `animate-ping`
+3. `animate-pulse`
+4. `animate-bounce`
+
+## Creating Custom Animations
+
+Here's how to extend Tailwind's animation system:
+
+```javascript
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      keyframes: {
+        "slide-in": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+      },
+      animation: {
+        "slide-in": "slide-in 0.5s ease-out",
+      },
+    },
+  },
+};
+```
+
+## Performance Tips
+
+1. Use `will-change` appropriately
+2. Animate transform and opacity properties
+3. Use `@apply` for complex animations
+4. Consider reduced-motion preferences
+
+## Common Use Cases
+
+- Page transitions
+- Loading states
+- Hover effects
+- Micro-interactions
+
+Remember: Subtle animations can greatly enhance UX, but too much animation can be distracting.

@@ -41,7 +41,7 @@ export const Testimonials = () => {
   ];
   return (
     <div className="shadow-section-inset my-4 border-y border-neutral-100 p-4">
-      <SectionHeading className="pb-4" delay={0.8}>
+      <SectionHeading className="mb-4" delay={0.8}>
         People love my work
       </SectionHeading>
       <div className="flex [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)] py-4">

@@ -12,7 +12,13 @@ export const SectionHeading = ({
   className?: string;
 }) => {
   return (
-    <h2 className={cn("max-w-lg pt-4 text-sm md:text-sm", className)}>
+    <h2
+      className={cn(
+        "relative mt-4 w-fit max-w-lg text-sm md:text-sm",
+        className,
+      )}
+    >
+      <Background />
       {children.split(" ").map((word, idx) => (
         <motion.span
           initial={{ opacity: 0, y: 5, filter: "blur(2px)" }}
@@ -34,5 +40,29 @@ export const SectionHeading = ({
         </motion.span>
       ))}
     </h2>
+  );
+};
+
+const Background = () => {
+  return (
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.3,
+        ease: "easeInOut",
+        delay: 1,
+      }}
+      className="absolute inset-0 size-full scale-[1.04] bg-neutral-100"
+    >
+      <div className="absolute -top-px -left-px size-1 animate-pulse rounded-full bg-neutral-200"></div>
+      <div className="absolute -top-px -right-px size-1 animate-pulse rounded-full bg-neutral-200"></div>
+      <div className="absolute -bottom-px -left-px size-1 animate-pulse rounded-full bg-neutral-200"></div>
+      <div className="absolute -right-px -bottom-px size-1 animate-pulse rounded-full bg-neutral-200"></div>
+    </motion.div>
   );
 };

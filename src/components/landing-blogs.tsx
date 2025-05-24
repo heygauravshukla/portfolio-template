@@ -10,7 +10,7 @@ export const LandingBlogs = async () => {
   };
   return (
     <div className="px-4">
-      <SectionHeading className="pb-4" delay={0.4}>
+      <SectionHeading className="mb-4" delay={0.4}>
         I love writing things down
       </SectionHeading>
       <div className="flex flex-col gap-8">

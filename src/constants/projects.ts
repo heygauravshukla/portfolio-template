@@ -30,4 +30,18 @@ export const projects: Project[] = [
     description: "A WebGL animation built with React and Three.js.",
     href: "#",
   },
+  {
+    title: "Portfolio Website",
+    src: "https://aceternity.com/cdn-cgi/image/width=1080/https://assets.aceternity.com/features-section.png",
+    description:
+      "A personal portfolio website built with Next.js and TailwindCSS.",
+    href: "#",
+  },
+  {
+    title: "Weather Dashboard",
+    src: "https://aceternity.com/cdn-cgi/image/width=1080/https://assets.aceternity.com/floating-dock.png",
+    description:
+      "A weather dashboard with real-time updates using OpenWeather API.",
+    href: "#",
+  },
 ];

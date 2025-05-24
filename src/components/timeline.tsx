@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { CircleCheck } from "lucide-react";
+import { IconCircleCheckFilled } from "@tabler/icons-react";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 
@@ -171,7 +171,7 @@ const Step = ({
       }}
       className={cn("flex items-start gap-2", className)}
     >
-      <CircleCheck className="mt-1 size-4 text-neutral-500" />
+      <IconCircleCheckFilled className="mt-1 size-4 text-neutral-500" />
       {children}
     </motion.div>
   );

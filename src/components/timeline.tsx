@@ -89,6 +89,10 @@ export const Timeline = () => {
       {data.map((year, index) => (
         <div content="px-4 py-1" key={year.title} className="mb-4">
           <motion.h2
+            initial={{
+              filter: "blur(10px)",
+              opacity: 0,
+            }}
             animate={{
               filter: isInView ? "blur(0px)" : "blur(10px)",
               opacity: isInView ? 1 : 0,
@@ -108,6 +112,10 @@ export const Timeline = () => {
               <div key={item.title} className="pl-4">
                 <Step isInView={isInView} idx={idx}>
                   <motion.h3
+                    initial={{
+                      opacity: 0,
+                      y: -10,
+                    }}
                     animate={{
                       opacity: isInView ? 1 : 0,
                       y: isInView ? 0 : -10,
@@ -124,6 +132,10 @@ export const Timeline = () => {
                 </Step>
                 {item.description && (
                   <motion.p
+                    initial={{
+                      opacity: 0,
+                      y: -10,
+                    }}
                     animate={{
                       opacity: isInView ? 1 : 0,
                       y: isInView ? 0 : -10,
@@ -160,6 +172,10 @@ const Step = ({
 }) => {
   return (
     <motion.div
+      initial={{
+        opacity: 0,
+        y: -10,
+      }}
       animate={{
         opacity: isInView ? 1 : 0,
         y: isInView ? 0 : -10,

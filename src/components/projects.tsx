@@ -1,42 +1,19 @@
 "use client";
+import { SectionHeading } from "@/components/section-heading";
+import { Project, projects as defaultProjects } from "@/constants/projects";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Projects = () => {
-  const projects = [
-    {
-      title: "Macbook Mockup",
-      src: "https://aceternity.com/cdn-cgi/image/width=1080/https://assets.aceternity.com/macbook-scroll.png",
-      description: "A mockup of a Macbook with a scrolling effect.",
-      href: "#",
-    },
-    {
-      title: "Flight Simulator",
-      src: "https://aceternity.com/cdn-cgi/image/width=1080/https://assets.aceternity.com/background-lines.webp",
-      description: "A flight simulator built with React and Three.js.",
-      href: "#",
-    },
-    {
-      title: "3D Model Viewer",
-      src: "https://aceternity.com/cdn-cgi/image/width=1080/https://assets.aceternity.com/carousel.webp",
-      description: "A 3D model viewer built with React and Three.js.",
-      href: "#",
-    },
-    {
-      title: "WebGL Animation",
-      src: "https://aceternity.com/cdn-cgi/image/width=1080/https://assets.aceternity.com/animated-testimonials.webp",
-      description: "A WebGL animation built with React and Three.js.",
-      href: "#",
-    },
-  ];
-
+export const Projects = ({
+  projects = defaultProjects,
+}: {
+  projects?: Project[];
+}) => {
   return (
     <div className="py-10">
-      <p className="text-secondary max-w-lg pt-4 text-sm md:text-sm">
-        I love building web apps and products that can impact millions of lives
-      </p>
-      <div className="grid grid-cols-1 gap-4 py-4 md:grid-cols-2">
+      <SectionHeading delay={0.2}>A lifetime in projects</SectionHeading>
+      <div className="grid grid-cols-1 gap-4 py-4 md:grid-cols-3">
         {projects.map((project, idx) => (
           <motion.div
             initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}

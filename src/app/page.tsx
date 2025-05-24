@@ -3,6 +3,7 @@ import { Heading } from "@/components/heading";
 import { LandingBlogs } from "@/components/landing-blogs";
 import { Projects } from "@/components/projects";
 import { Subheading } from "@/components/subheading";
+import { projects } from "@/constants/projects";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
           I'm a software engineer with a passion for building scalable and
           efficient systems. I'm a currently working as a freelancer.
         </Subheading>
-        <Projects />
+        <Projects projects={projects.slice(0, 3)} />
         <LandingBlogs />
       </Container>
     </div>

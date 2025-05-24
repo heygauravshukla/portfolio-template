@@ -18,7 +18,9 @@ export const Subheading = ({
       transition={{ duration: 0.3, ease: "easeInOut", delay: 0.2 }}
       viewport={{ once: true }}
     >
-      <Tag className={cn("text-secondary max-w-lg pt-4 text-sm", className)}>
+      <Tag
+        className={cn("text-secondary max-w-lg px-4 pt-4 text-sm", className)}
+      >
         {children}
       </Tag>
     </motion.div>

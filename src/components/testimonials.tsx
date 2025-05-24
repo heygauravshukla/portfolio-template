@@ -40,7 +40,7 @@ export const Testimonials = () => {
     },
   ];
   return (
-    <div className="py-10">
+    <div className="shadow-section-inset my-4 border-y border-neutral-100 p-4">
       <SectionHeading className="pb-4" delay={0.8}>
         People love my work
       </SectionHeading>

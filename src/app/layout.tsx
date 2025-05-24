@@ -3,6 +3,7 @@ import { Footer } from "@/components/navbar/footer";
 import type { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
 import { Inter } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const inter = Inter({
@@ -27,6 +28,7 @@ export default function RootLayout({
         <body
           className={`${inter.className} bg-neutral-100 antialiased dark:bg-neutral-700`}
         >
+          <Toaster position="top-center" />
           <Navbar />
           {children}
           <Footer />

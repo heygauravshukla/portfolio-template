@@ -1,11 +1,25 @@
 import { Container } from "@/components/container";
-import { getSingleBlog } from "@/utils/mdx";
+import { getBlogFrontMatterBySlug, getSingleBlog } from "@/utils/mdx";
 import { redirect } from "next/navigation";
 
-export const metadata = {
-  title: "All blogs - Gaurav Shukla",
-  description: "All my general blogs, tutorials, and articles.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const frontmatter = await getBlogFrontMatterBySlug(params.slug);
+
+  if (!frontmatter) {
+    return {
+      title: "Blog not found",
+    };
+  }
+
+  return {
+    title: frontmatter.title + " - Gaurav Shukla",
+    description: frontmatter.description,
+  };
+}
 
 export default async function BlogPage({
   params,

@@ -24,7 +24,7 @@ export default async function BlogsPage() {
           I'm a software engineer with a passion for building scalable and
           efficient systems. I'm a currently working as a freelancer.
         </Subheading>
-        <div className="flex flex-col gap-4 py-10">
+        <div className="flex flex-col gap-8 py-10">
           {allBlogs.map((blog) => (
             <Link href={`/blog/${blog.slug}`} key={blog.title}>
               <div className="flex items-center justify-between">

@@ -13,8 +13,8 @@ export const LandingBlogs = async () => {
       <SectionHeading className="pb-4" delay={0.4}>
         I love writing things down
       </SectionHeading>
-      <div className="flex flex-col gap-4">
-        {allBlogs.map((blog, idx) => (
+      <div className="flex flex-col gap-8">
+        {allBlogs.slice(0, 3).map((blog, idx) => (
           <MotionDiv
             key={blog.title}
             initial={{ opacity: 0, y: 10, filter: "blur(10px)" }}
@@ -36,7 +36,7 @@ export const LandingBlogs = async () => {
                 </p>
               </div>
               <p className="text-secondary max-w-lg pt-4 text-sm">
-                {truncate(blog.description || "", 150)}
+                {truncate(blog.description || "", 120)}
               </p>
             </Link>
           </MotionDiv>
